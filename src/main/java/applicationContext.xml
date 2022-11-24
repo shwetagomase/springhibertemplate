@@ -9,17 +9,17 @@
   
     <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">  
         <property name="driverClassName"  value="org.hibernate.dialect.MySQLDialect"></property>  
-        <property name="url" value="jdbc:mysql://localhost:3306/stu"></property>  
+        <property name="url" value="jdbc:mysql://localhost:3306/db"></property>  
         <property name="username" value="root"></property>  
         <property name="password" value="root"></property>  
     </bean>  
       
-    <bean id="mysessionFactory"  class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">  
+    <bean id="mysessionFactory"  class="org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean">  
         <property name="dataSource" ref="dataSource"></property>  
           
-        <property name="mappingResources">  
+        <property name="annotatedClasses">  
         <list>  
-        <value>employee.hbm.xml</value>  
+        <value>com.example.demo.model.Employee</value>  
         </list>  
         </property>  
           

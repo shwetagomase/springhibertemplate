@@ -15,11 +15,10 @@ public class Demo9Application {
 	    EmployeeDao dao=(EmployeeDao)context.getBean("d");  
 	      
 	    Employee e=new Employee();  
-	    e.setId(115);  
+	    e.setId(2);  
 	    e.setName("varun");  
 	    e.setSalary(50000);  
 	      
 	    dao.saveEmployee(e);  
 	}
-
 }

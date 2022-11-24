@@ -1,10 +1,20 @@
 package com.example.demo.model;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+@Entity
+@Table(name="springht")
 public class Employee 
 {
-	private int id;  
-	private String name;  
+	@Id
+	private int id; 
+	@Column
+	private String name; 
+	@Column
 	private float salary;
+	
 	public int getId() {
 		return id;
 	}
@@ -22,7 +32,5 @@ public class Employee
 	}
 	public void setSalary(float salary) {
 		this.salary = salary;
-	}  
-	  
-	
+	}  	
 }
